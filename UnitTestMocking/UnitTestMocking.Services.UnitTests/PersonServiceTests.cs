@@ -6,7 +6,7 @@ using UnitTestMocking.Repositories;
 namespace UnitTestMocking.Services.UnitTests
 {
     [TestClass]
-    public class PersonTests
+    public class PersonServiceTests
     {
         private PersonService _personService;
         private Mock<PersonRepository> _personRepository;
@@ -17,13 +17,6 @@ namespace UnitTestMocking.Services.UnitTests
             _personRepository = new Mock<PersonRepository>();
 
             _personService = new PersonService(_personRepository.Object);
-        }
-
-        [TestCleanup]
-        public void TearDown()
-        {
-            _personRepository = null;
-            _personService = null;
         }
 
         [TestMethod]
@@ -39,6 +32,13 @@ namespace UnitTestMocking.Services.UnitTests
 
             //Assert
             _personRepository.Verify(x => x.Create(It.IsAny<Person>()), Times.Once);
+        }
+
+        [TestCleanup]
+        public void TearDown()
+        {
+            _personRepository = null;
+            _personService = null;
         }
     }
 }

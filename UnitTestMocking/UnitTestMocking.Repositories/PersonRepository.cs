@@ -6,6 +6,7 @@ namespace UnitTestMocking.Repositories
     {
         public virtual void Create(Person item)
         {
+            //Create record in database instead of throwing an exception. this is just for an example. 
             throw new System.NotImplementedException();
         }
     }
