@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UnitTestMocking.Repositories\UnitTestMocking.Repositories.csproj" />
+    <ProjectReference Include="..\UnitTestMocking.Services.Interfaces\UnitTestMocking.Services.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
